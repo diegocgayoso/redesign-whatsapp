@@ -1,0 +1,35 @@
+<header class="header d-flex container">
+  <img src="./assets/cam.svg" alt="">
+  <p>Chat</p>
+  <p>Calls</p>
+</header>
+<section class="options d-flex">
+  <form class="container">
+    <mat-form-field class="full-width" floatLabel="never" appearance="outline">
+      <mat-icon matPrefix style="color: white;">search</mat-icon>
+      <mat-label>Buscar</mat-label>
+      <input matInput>
+    </mat-form-field>
+  </form>
+  <button>
+    <mat-icon class="mat-18" style="color: white;">star</mat-icon>
+  </button>
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon style="color: white;">more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon >dialpad</mat-icon>
+      <span>Redial</span>
+    </button>
+    <button mat-menu-item disabled>
+      <mat-icon>voicemail</mat-icon>
+      <span>Check voice mail</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>notifications_off</mat-icon>
+      <span>Disable alerts</span>
+    </button>
+  </mat-menu>
+
+</section>
